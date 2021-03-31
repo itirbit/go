@@ -7,6 +7,7 @@ import (
 
 func main() {
 	t := time.Now()
+	fmt.Println(t);
 	switch {
 	case t.Hour() < 12:
 		fmt.Println("Good morning!")
