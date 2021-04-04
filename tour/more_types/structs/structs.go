@@ -14,5 +14,9 @@ var (
 )
 
 func main() {
+	p.x = 2
+	p.y = 4
+	v1.x = 4
+	v2.y = 8
 	fmt.Println(v1, p, v2, v3)
 }
