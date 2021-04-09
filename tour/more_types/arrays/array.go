@@ -61,10 +61,16 @@ func slice_literals(){
 func slice_bounds() {
 	s := []int{2,3,5,7,11,13}
 
-	s = s[1:4]
+	s = s[0:5]
 	fmt.Println(s)
 
-	s = s[:2]
+	s = s[:5]
+	fmt.Println(s)
+
+	s = s[0:]
+	fmt.Println(s)
+
+	s = s[1:]
 	fmt.Println(s)
 
 	s = s[1:]
