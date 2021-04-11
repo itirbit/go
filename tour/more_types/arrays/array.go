@@ -96,8 +96,14 @@ func printSlice(s []int){
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
 
-
+func nil_slices(){
+	var s[]int
+	fmt.Println(s, len(s), cap(s))
+	if s == nil{
+		fmt.Println("nil!")
+	}
+}
 
 func main(){
-	slice_len_cap()
+	nil_slices()
 }
