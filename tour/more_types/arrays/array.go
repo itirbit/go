@@ -137,6 +137,20 @@ func slices_of_slice(){
 	}
 }
 
+func append_slice(){
+	var s []int
+	printSlice(s)
+
+	s = append(s,0)
+	printSlice(s)
+
+	s = append(s,1)
+	printSlice(s)
+
+	s = append(s,2,3,4)
+	printSlice(s)
+}
+
 func main(){
-	slices_of_slice()
+	append_slice()
 }
