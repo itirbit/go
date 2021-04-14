@@ -141,17 +141,10 @@ func append_slice(){
 	var s []int
 	printSlice(s)
 
-	s = append(s,0)
-	printSlice(s)
-
-	s = append(s,1)
-	printSlice(s)
-
-	s = append(s,2,3,4)
-	printSlice(s)
-
-	s = append(s,5,6,7)
-	printSlice(s)
+	for i:=0; i<10; i++{
+		s = append(s,i)
+		printSlice(s)
+	}
 }
 
 func main(){
