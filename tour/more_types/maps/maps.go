@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "golang.org/x/tour/wc"
 
 func maps(){
 
@@ -31,6 +32,25 @@ func mutate_maps(){
 	fmt.Println("The value:", v, "Present?", ok)
 }
 
+func WordCount(s string) map[string]int{
+	var m = make(map[string]int)
+	var buff = ""
+	for i:=0; i <len(s); i++{
+		if s[i] == ' '{
+			m[buff]++
+			buff = ""
+		}else{
+			buff += string(s[i])
+		}
+	}
+	m[buff]++
+	return m
+}
+
+func maps_exe(){
+	wc.Test(WordCount)
+}
+
 func main(){
-	mutate_maps();
+	maps_exe();
 }
