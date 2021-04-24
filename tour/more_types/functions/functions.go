@@ -27,6 +27,24 @@ func adder() func(int) int {
 	}
 }
 
+func fib() func() int{
+	a := 0
+	b := 1
+	return func() int {
+		t := a
+		a = a + b
+		b = t
+		return b
+	}
+}
+
+func fibonacci(){
+	f := fib()
+	for i:=0; i < 10; i++ {
+		fmt.Println(f())
+	}
+}
+
 func function_closures(){
 	pos, neg := adder(), adder()
 	for i := 0; i < 10; i++ {
@@ -38,5 +56,5 @@ func function_closures(){
 }
 
 func main() {
-	function_closures();
+	fibonacci();
 }
