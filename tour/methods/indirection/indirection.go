@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+import "math"
 
 type Vertex struct {
 	X, Y float64
@@ -16,7 +17,15 @@ func ScaleFunc(v *Vertex, f float64){
 	v.Y = v.Y * f
 }
 
-func main(){
+func (v Vertex) Abs() float64{
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func AbsFunc(v Vertex) float64{
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+}
+
+func indirection1(){
 	v := Vertex{3,4}
 	v.Scale(2)
 	ScaleFunc(&v,10)
@@ -26,4 +35,18 @@ func main(){
 	ScaleFunc(p, 8)
 
 	fmt.Println(v,p)
+}
+
+func indirection2(){
+	v := Vertex{3,4}
+	fmt.Println(v.Abs())
+	fmt.Println(AbsFunc(v))
+
+	p:= &Vertex{4,3}
+	fmt.Println(p.Abs())
+	fmt.Println(AbsFunc(*p))
+}
+
+func main(){
+	indirection2()
 }
