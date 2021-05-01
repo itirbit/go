@@ -66,5 +66,5 @@ func pointer_receiver2(){
 }
 
 func main(){
-	pointer_receiver()
+	pointer_receiver2()
 }
