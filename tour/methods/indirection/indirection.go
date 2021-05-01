@@ -25,6 +25,10 @@ func AbsFunc(v Vertex) float64{
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
+func (v *Vertex) Absp() float64 {
+	return math.Sqrt(v.X * v.X + v.Y * v.Y)
+}
+
 func indirection1(){
 	v := Vertex{3,4}
 	v.Scale(2)
@@ -52,6 +56,13 @@ func pointer_receiver(){
 	fmt.Printf("Before scaling: %+v, Abs: %v\n", v, v.Abs())
 	v.Scale(5)
 	fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Abs())
+}
+
+func pointer_receiver2(){
+	v := &Vertex{3,4}
+	fmt.Printf("Before scaling: %+v, Abs: %v\n", v, v.Absp())
+	v.Scale(5)
+	fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Absp())
 }
 
 func main(){
