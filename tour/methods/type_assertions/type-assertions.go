@@ -9,11 +9,25 @@ func main(){
 	fmt.Println(s)
 
 	s, ok := i.(string)
-	fmt.Println(s, ok)
+	if (ok) {
+		fmt.Println("cast to string success ", s)
+	}else{
+		fmt.Println("failed cast to string")
+	}
 
 	f, ok := i.(float64)
-	fmt.Println(f, ok)
+	if (ok){
+		fmt.Println("cast to float64 success ", f)
+	}else{
+		fmt.Println("failed cast to float64")
+	}
 
 	in, ok := i.(int)
-	fmt.Println(in, ok)
+	if(ok){
+		fmt.Println("cast to int success ", in)
+	}else{
+		fmt.Println("failed cast to int")
+	}
 }
+
+
