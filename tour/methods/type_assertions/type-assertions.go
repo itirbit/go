@@ -14,6 +14,6 @@ func main(){
 	f, ok := i.(float64)
 	fmt.Println(f, ok)
 
-	f = i.(float64)
-	fmt.Println(f)
+	in, ok := i.(int)
+	fmt.Println(in, ok)
 }
